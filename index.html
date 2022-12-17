@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>C150</title>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    </head>
+
+    <body>
+        <a-scene background="color:gray">
+            <a-camera wasd-controls-enabled="true" position="0 0 20"></a-camera>
+
+            <a-assets>
+                <a-asset-item id="train" src="./model/tinker.obj"></a-asset-item>
+                <a-asset-item id="train-mtl" src="./model/obj.mtl"></a-asset-item>
+            </a-assets>
+
+            <a-entity>
+                <a-entity position="0 0 0" rotation="-90 90 0" obj-model="obj: #train; mtl: #train-mtl" scale="0.05 0.05 0.05" shadowa="cast:true"></a-entity>
+            </a-entity>
+        </a-scene>
+    </body>
+</html>
